@@ -1,4 +1,4 @@
-interface TypographyPropsType {
+interface TypographyProps {
   tag?: keyof JSX.IntrinsicElements;
   text: string;
   classes?: string;
@@ -9,4 +9,4 @@ interface TypographyPropsType {
   ariaLabelledBy?: string;
 }
 
-export default TypographyPropsType;
+export default TypographyProps;
