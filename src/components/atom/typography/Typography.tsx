@@ -21,7 +21,8 @@ const Typography: React.FC<TypographyProps> = ({
       "aria-labelledby": ariaLabelledBy,
     },
     <>
-      {text},{children}
+      {text}
+      {children}
     </>
   );
 };
