@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.cursorignore
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +23,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*storybook.log
+# Storybook build output
+/storybook-static
+
+# Storybook cache
+.cache
+.storybook-cache
+# Operating system files
+.DS_Store
+Thumbs.db

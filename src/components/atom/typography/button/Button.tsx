@@ -1,20 +1,26 @@
-import ButtonProps from './type';
-import getBtnClasses from './utility';
+import ButtonProps from "./type";
+import getBtnClasses from "./utility";
 
 const Button: React.FC<ButtonProps> = ({
-  variant = 'primary',
-  variantType = 'filled',
-  children,
-  type,
-  classes,
+  variant = "primary",
+  variantType = "filled",
+  type = "button",
   onClick,
+  children,
+  className = "",
   isLoading,
   ...restProps
 }) => {
-  const btnClasses = getBtnClasses({ variant, variantType, classes, isLoading });
+  const defaultClasses = getBtnClasses({ variant, variantType, isLoading });
+  const combinedClasses = `${defaultClasses} ${className}`.trim();
 
   return (
-    <button type={type} className={btnClasses} onClick={onClick} {...restProps}>
+    <button
+      type={type}
+      className={combinedClasses}
+      onClick={onClick}
+      {...restProps}
+    >
       <span className="flex items-center justify-center gap-3">
         {children}
         {isLoading && (

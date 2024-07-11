@@ -17,14 +17,42 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Tailwind CSS Configuration
+
+The `tailwind.config.js` file includes a safelist configuration to ensure all Tailwind classes are available at runtime:
+
+```js
+safelist: [
+  {
+    pattern: /.*/,
+  },
+  {
+    pattern: /^!.+$/,
+    variants: ["bg"],
+  },
+],
+```
+
+This safelist configuration allows for running all Tailwind classes at runtime. Without it, only predefined classes would be rendered.
+
+## Running Storybook
+
+To run Storybook, use the following command:
+
+```
+npm run storybook
+```
+
+This will start the Storybook development server, allowing you to view and interact with your components in isolation.
