@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: "#1E2761",
-        secondary: "#408EC6",
-        tertiary: "#7A2048",
+        primary: '#1489d3',
+        secondary: '#bb1623e0',
+        tertiary: '#3f4d5c',
+      },
+      fontFamily: {
+        openSans: ['Open Sans', 'sans-serif'],
       },
     },
   },
