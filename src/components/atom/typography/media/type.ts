@@ -1,4 +1,4 @@
-type MediaType = 'image' | 'video';
+type MediaType = "image" | "video";
 
 interface MediaProps {
   type: MediaType;
@@ -6,6 +6,7 @@ interface MediaProps {
   alt: string;
   containerClasses?: string;
   mediaClasses?: string;
+  showControls?: boolean;
 }
 
 export default MediaProps;
