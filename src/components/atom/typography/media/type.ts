@@ -1,6 +1,6 @@
-type MediaType = 'image' | 'video';
+export type MediaType = 'image' | 'video';
 
-interface MediaProps {
+export type CommonProps = {
   type: MediaType;
   src: string;
   alt: string;
@@ -8,4 +8,14 @@ interface MediaProps {
   mediaClasses?: string;
 }
 
-export default MediaProps;
+export type ImageProps = CommonProps & React.ImgHTMLAttributes<HTMLImageElement>;
+export type VideoProps = CommonProps & React.VideoHTMLAttributes<HTMLVideoElement>;
+
+export type MediaProps = ImageProps | VideoProps
+
+
+
+
+
+
+
