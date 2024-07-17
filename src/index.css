@@ -7,9 +7,10 @@
 }
 
 body {
-  background-color: #041233;
+  background-color: #131627;
   opacity: 0.8;
-  background-image: radial-gradient(#363636 0.5px, #041233 0.5px);
+  background-image: radial-gradient(#363636 0.5px, #131627 0.5px);
   background-size: 10px 10px;
   height: 100vh;
+  padding: 100px;
 }
