@@ -3,10 +3,28 @@ import Button from '../../components/atom/button/Button';
 import viteLogo from '../../assets/react.svg';
 import { NavLink } from 'react-router-dom';
 
+const codeSnippet = `
+  <Button
+    variant="primary"
+    variantType="filled"
+    type="button"
+    classes="web-dairy">
+
+    Subscribe Web Diary
+    <img src={viteLogo} className="w-5 h-5" alt="Vite Logo" />
+
+  </Button>
+  `;
+
 const ButtonVariants = () => {
   return (
     <>
-      <NavLink to="/"><span className='text-yellow-400 inline-block mb-6'>Go Home</span></NavLink>
+      <NavLink to="..">
+        <span className="text-yellow-400 inline-block mb-6">Go Home</span>
+      </NavLink>
+
+      <Typography text="Design System : Button" classes="mb-8 text-[30px] font-bold text-white" />
+      <hr className="mt-5 mb-8 border-tertiary" />
 
       <Typography
         text="Primary Button | Filled variant type | Icon at right side"
@@ -16,6 +34,10 @@ const ButtonVariants = () => {
         Subscribe Web Diary
         <img src={viteLogo} className="w-5 h-5" alt="Vite Logo" />
       </Button>
+
+      <pre className="bg-black rounded-[10px] my-4">
+        <code className="text-white">{codeSnippet}</code>
+      </pre>
 
       <hr className="mt-10 mb-5 border-tertiary" />
 
@@ -43,10 +65,7 @@ const ButtonVariants = () => {
 
       {/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */}
 
-      <Typography
-        text="Primary Button with only icon"
-        classes="mb-5 text-white"
-      />
+      <Typography text="Primary Button with only icon" classes="mb-5 text-white" />
       <Button
         type="button"
         classes="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded cursor-pointer"
