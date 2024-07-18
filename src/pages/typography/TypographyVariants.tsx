@@ -15,7 +15,7 @@ const codeSnippet = `
   </Typography>
   `;
 
-const TypographyVariants = () => {
+const TypographyVariants: React.FC = () => {
   return (
     <>
       <NavLink to="..">

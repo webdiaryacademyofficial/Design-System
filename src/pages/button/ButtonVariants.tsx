@@ -16,7 +16,7 @@ const codeSnippet = `
   </Button>
   `;
 
-const ButtonVariants = () => {
+const ButtonVariants: React.FC = () => {
   return (
     <>
       <NavLink to="..">

@@ -14,7 +14,7 @@ const codeSnippet = `
   />
   `;
 
-const mediaVariants = () => {
+const mediaVariants: React.FC = () => {
   return (
     <>
       <NavLink to="..">
